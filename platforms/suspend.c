@@ -41,11 +41,14 @@ __attribute__((weak)) void suspend_wakeup_init_kb(void) {
  * FIXME: needs doc
  */
 bool suspend_wakeup_condition(void) {
+    //Disable waking up your keyboard with keypresses
+    /*
     matrix_power_up();
     matrix_scan();
     matrix_power_down();
     for (uint8_t r = 0; r < MATRIX_ROWS; r++) {
         if (matrix_get_row(r)) return true;
     }
+    */
     return false;
 }
